@@ -8,11 +8,9 @@ import (
 
 func main() {
 	fmt.Print("hello world!")
-	app := fiber.New();
-	app.Get("/abc",func(c*fiber.Ctx)error{
+	app := fiber.New()
+	app.Get("/abc", func(c *fiber.Ctx) error {
 		return c.SendString("Hello Ajay!\n hello")
 	})
-		app.Listen(":3000")
-	}
-
-
+	app.Listen(":3000")
+}
